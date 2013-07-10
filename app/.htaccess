@@ -1,3 +1,4 @@
 RewriteEngine on
-RewriteRule   ^resume-download/?$         kyle-smith-resume.pdf         [L]
-RewriteRule   !^resume-download/?$        resume.html                   [L]
+
+RewriteRule   ^download/?$          kyle-smith-resume.pdf         [L]
+RewriteRule   ^/?$                  resume.html                   [L]
