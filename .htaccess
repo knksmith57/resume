@@ -1,4 +1,3 @@
 RewriteEngine on
-
-RewriteRule   ^resume-download/?$         dist/kyle-smith-resume.pdf       [L]
-RewriteRule   ^.*$                        dist/resume.html                 [L]
+RewriteCond   %{ENV:REDIRECT_STATUS}    ^$
+RewriteRule   ^(.*)$                    /dist/$1          [L]
