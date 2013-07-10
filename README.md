@@ -1,6 +1,9 @@
 My Resume
 =========
 
+[Check it out live @ ksmith.io/resume](http://ksmith.io/resume)  (download the
+PDF via [ksmith.io/resume/download](http://ksmith.io/resume/download)).
+
 There are [literally][1] [thousands][2] [of][3] [these][4] so-called "markdown" [resumes][5]
 out there-- so why did I re-invent the wheel? The short answer is that
 I couldn't find any solutions that, I felt, looked good in Markdown, HTML,
