@@ -1,0 +1,346 @@
+@import "normalize";
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,);
+
+$lato: 'Lato', sans-serif;
+
+$linkGrey: hsl(0, 0%, 42%);
+$borderGrey: hsl(0, 0%, 70%);
+
+body {
+  background: #FFFFFF;
+}
+
+ol, ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  // float: left;
+}
+
+a {
+  font-family: $lato;
+
+  color: $linkGrey;
+
+  &:link, &:visited {
+    text-decoration: none;
+    @media screen {
+      border-bottom: 1px dotted $linkGrey;
+    }
+  }
+
+  &:hover, &:active {
+    text-decoration: none;
+    border-bottom: 1px dotted transparent;
+  }
+}
+
+// title header
+h1 {
+  font-family: $lato;
+  font-weight: 900;
+  font-size: 2.5em;
+  letter-spacing: 0.4em;
+  word-spacing: 0.3em;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  margin: 0;
+  margin-bottom: 0.5em;
+
+  @media screen and (max-width: 500px) {
+    font-size: 2em;
+  }
+}
+
+// section headers
+h2 {
+  font-family: $lato;
+  font-weight: 300;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+
+  color: $borderGrey;
+  background: #FFF;
+
+  text-transform: uppercase;
+  text-align: right;
+
+  margin: 1em 0 1.5em 0;
+
+  @media screen and (max-width: 500px) {
+    text-align: center;
+    margin: 1.5em 0;
+  }
+}
+
+h2:after {
+  content: '';
+  display: block;
+  width: 80%;
+  margin-top: -0.5em;
+  z-index: -9999;
+  border-bottom: 1px solid $borderGrey;
+
+  @media screen and (max-width: 700px) {
+    width: 70%;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin-top: 0;
+    width: 100%;
+  }
+}
+
+// contact list centered
+main > ul:first-of-type {
+  text-align: center;
+
+  position: relative;
+  left: -8px;
+
+  li {
+    font-family: $lato;
+    font-size: 0.8em;
+
+    color: $linkGrey;
+    padding: 0 1.5em;
+
+    @media screen and (max-width: 500px) {
+      display: list-item;
+      padding: 0.2em;
+    }
+  }
+
+  // never show twitter handle on rendered page
+  // (ie: it's a cookie crumb in the markdown file in case anyone is looking)
+  li:last-of-type {
+    display: none;
+  }
+
+  @media screen and (max-width: 500px) {
+    left: 0;
+  }
+}
+
+// experience headings
+h3 {
+  font-family: $lato;
+  font-weight: 900;
+  font-style: italic;
+  font-size: 1em;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  float: left;
+  clear: left;
+  margin: 0;
+}
+
+li h3 {
+  font-weight: 900;
+  font-style: normal;
+}
+
+h2+ul:nth-of-type(2) {
+  margin-top: 0;
+}
+
+h2+ul, main > p+ul {
+  @extend h3;
+
+  font-weight: 300;
+
+  display: block;
+  margin: 1em 0;
+  width: 100%;
+
+  clear: right;
+
+  li {
+    font-weight: 400;
+    font-style: italic;
+    margin-left: 1em;
+    float: left;
+    @media screen and (max-width: 700px) {
+      margin-left: 0;
+      clear: left;
+    }
+  }
+
+  li:first-of-type {
+    margin-left: 0;
+  }
+
+  li:last-of-type {
+    font-size: 0.7em;
+    font-style: normal;
+    float: right;
+    margin-right: 2em;
+
+    @media screen and (max-width: 700px) {
+      clear: right;
+    }
+
+    @media screen and (max-width: 550px) {
+      float: left;
+      clear: both;
+    }
+  }
+}
+
+main > p {
+  font-family: $lato;
+  font-size: 0.8em;
+  text-align: justify;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  clear: both;
+  color: $linkGrey;
+
+  @media screen and (max-width: 700px) {
+    width: 90%;
+  }
+}
+
+// education headings
+ol {
+  font-family: $lato;
+  font-weight: 700;
+  font-size: 1em;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  width: 100%;
+  margin: 0;
+
+  > li {
+    width: 100%;
+    margin-bottom: 1.5em;
+  }
+
+  ul {
+    li {
+      margin: 0.5em 0;
+      display: list-item;
+    }
+
+    li:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  > li:last-of-type {
+    margin-bottom: 0;
+  }
+
+  p {
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+
+    em {
+      font-weight: 400;
+      font-style: italic;
+      display: inline-block;
+      margin-left: 1em;
+
+      @media screen and (max-width: 700px) {
+        display: block;
+        margin-left: 0;
+      }
+    }
+  }
+
+  ul {
+    width: 80%;
+    margin: 0 auto;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 0.8em;
+
+    @media screen and (max-width: 700px) {
+      width: 90%;
+    }
+  }
+}
+
+// skill set list
+main > ul:last-of-type {
+
+  // never let the print cropping hide these "skill set" items
+  display: block !important;
+
+  text-align: justify;
+  margin: 1em;
+  margin-top: 0;
+
+  li {
+    font-family: $lato;
+    font-size: 0.8em;
+    padding: 0.5em;
+
+    // these are marked !important because _no_ media query should cause them
+    // to stop floating against eachother
+    float: left !important;
+    clear: none !important;
+  }
+
+  li:last-of-type {
+    font-family: $lato;
+    font-size: 0.8em;
+    font-style: italic;
+    padding: 0.5em;
+  }
+}
+
+// "fork me" badge styling
+a.fork-me {
+  &:link, &:visited {
+    opacity: 0.2;
+  }
+
+  &:hover, &:active {
+    opacity: 1;
+  }
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+}
+
+@media screen {
+  // if NOT printing, add some padding to the edges
+  main {
+    padding: 1em 1.5em;
+  }
+}
+
+@media print {
+  // only show the first 4 experience sections when printing (so everything fits on 1 page)
+  main > ul:nth-of-type(6),
+  main > ul:nth-of-type(7),
+  main > ul:nth-of-type(8),
+  main > ul:nth-of-type(9),
+  main > ul:nth-of-type(10) {
+    display: none;
+
+    +p {
+      display: none;
+    }
+  }
+
+  // hide "fork me" badge when printing
+  a.fork-me {
+    display: none;
+  }
+}

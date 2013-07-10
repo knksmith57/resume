@@ -1,0 +1,4 @@
+RewriteEngine on
+
+RewriteRule   ^resume-download/?$         dist/kyle-smith-resume.pdf       [L]
+RewriteRule   ^.*$                        dist/resume.html                 [L]
