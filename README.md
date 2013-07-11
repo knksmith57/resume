@@ -2,7 +2,8 @@ My Resume
 =========
 
 [Check it out live @ ksmith.io/resume](http://ksmith.io/resume)  (download the
-PDF via [ksmith.io/resume/download](http://ksmith.io/resume/download)).
+PDF via [ksmith.io/resume/download](http://ksmith.io/resume/download), check
+out the [markdown that makes it happen][resume file]).
 
 There are [literally][1] [thousands][2] [of][3] [these][4] so-called "markdown" [resumes][5]
 out there-- so why did I re-invent the wheel? The short answer is that
