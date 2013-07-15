@@ -68,10 +68,6 @@ Pull requests are always welcome, or you can get at me with any suggestions -->
 [@knksmith57]. If you find any bugs or browser-specific issues, I'd _really_
 appreciate a heads up. Thanks for stopping by!
 
-## License
-
-It's all yours under [Creative Commons CC0](http://creativecommons.org/publicdomain/zero/1.0/)
-
 
 [resume file]:      app/resume.md
 [grunt]:            http://gruntjs.com/getting-started
